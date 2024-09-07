@@ -1,0 +1,266 @@
+    @import './fonts.scss', './common.scss', "./media.scss",
+    '../../Components/Nav/Nav.scss',
+    '../../Components/Upcoming/Upcoming.scss',
+    '../../Components/Slider/Slider.scss',
+    "../../Components/Infoblock/Infoblock.scss",
+    "../../Components/Content/Content.scss",
+    "../../Components/Top/Top.scss",
+    "../../Components/InfoId/InfoId.scss";
+
+    body {
+        background-color: #141414;
+    }
+
+    .input {
+        padding: 20px;
+        width: 100%;
+        background-color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21.13px;
+        color: #141414;
+        border-radius: 10px;
+        margin-bottom: 30px;
+
+        &::placeholder {
+            color: #141414;
+        }
+
+    }
+
+    .movie {
+        padding-top: 140px;
+
+        @include media(1300) {
+            padding-top: 120px;
+        }
+
+        @include media(700) {
+            padding-top: 100px;
+        }
+
+        @include media(600) {
+            padding-top: 80px;
+        }
+
+        &_title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21.13px;
+            color: #fff;
+            margin-bottom: 30px;
+
+            @include media(600) {
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
+
+        }
+    }
+
+
+    .btn {
+        background: #149A03;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #fff;
+        border-radius: 10px;
+        width: 180px;
+        height: 50px;
+        justify-content: center;
+
+        span {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        @include media(1000) {
+            width: 160px;
+            height: 45px;
+            font-size: 18px;
+
+            span {
+                font-size: 25px;
+            }
+        }
+
+        @include media(800) {
+            width: 140px;
+            height: 40px;
+            font-size: 16px;
+            gap: 8px;
+
+            span {
+                font-size: 20px;
+            }
+        }
+
+        @include media(600) {
+            width: 120px;
+            height: 35px;
+            font-size: 15px;
+            gap: 5px;
+
+            span {
+                font-size: 18px;
+            }
+        }
+
+        @include media(450) {
+            width: 100px;
+            height: 30px;
+            font-size: 15px;
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .actors {
+        display: flex;
+        border: 1px solid #FFFFFF;
+        align-items: center;
+        gap: 20px;
+        width: max-content;
+        border-radius: 30px;
+        padding: 2px;
+        padding-right: 15px;
+
+        @include media(1000) {
+            flex-shrink: 0;
+            font-size: 16px;
+            line-height: 100%;
+            gap: 10px;
+        }
+
+        @include media(800) {
+            font-size: 14px;
+            gap: 5px;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+
+            @include media(1000) {
+                width: 50px;
+                height: 50px;
+            }
+
+            @include media(800) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @include media(400) {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+
+    .loader {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        background-color: #141414;
+    }
+
+    .lds-spinner,
+    .lds-spinner div,
+    .lds-spinner div:after {
+      box-sizing: border-box;
+    }
+    .lds-spinner {
+      display: inline-block;
+      position: relative;
+      width: 200px;
+      height: 200px;
+      color: #fff;
+    }
+    .lds-spinner div {
+      transform-origin: 100px 100px;
+      animation: lds-spinner 1.2s linear infinite;
+    }
+    .lds-spinner div:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 3.2px;
+      left: 36.8px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .lds-spinner div:nth-child(1) {
+      transform: rotate(0deg);
+      animation-delay: -1.1s;
+    }
+    .lds-spinner div:nth-child(2) {
+      transform: rotate(30deg);
+      animation-delay: -1s;
+    }
+    .lds-spinner div:nth-child(3) {
+      transform: rotate(60deg);
+      animation-delay: -0.9s;
+    }
+    .lds-spinner div:nth-child(4) {
+      transform: rotate(90deg);
+      animation-delay: -0.8s;
+    }
+    .lds-spinner div:nth-child(5) {
+      transform: rotate(120deg);
+      animation-delay: -0.7s;
+    }
+    .lds-spinner div:nth-child(6) {
+      transform: rotate(150deg);
+      animation-delay: -0.6s;
+    }
+    .lds-spinner div:nth-child(7) {
+      transform: rotate(180deg);
+      animation-delay: -0.5s;
+    }
+    .lds-spinner div:nth-child(8) {
+      transform: rotate(210deg);
+      animation-delay: -0.4s;
+    }
+    .lds-spinner div:nth-child(9) {
+      transform: rotate(240deg);
+      animation-delay: -0.3s;
+    }
+    .lds-spinner div:nth-child(10) {
+      transform: rotate(270deg);
+      animation-delay: -0.2s;
+    }
+    .lds-spinner div:nth-child(11) {
+      transform: rotate(300deg);
+      animation-delay: -0.1s;
+    }
+    .lds-spinner div:nth-child(12) {
+      transform: rotate(330deg);
+      animation-delay: 0s;
+    }
+    @keyframes lds-spinner {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    
